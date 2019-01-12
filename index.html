@@ -1,0 +1,85 @@
+<!Doctype <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vivek's Train Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- materialize -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Train Scheduler</a>
+        </div>
+    </nav>
+    <section class="section">
+        <form class="container">
+            <div class="row">
+                <div class="input-field col s6 m3">
+                    <input placeholder="Train Name" id="train-name" type="text">
+                    <label for="train_name">Train Name</label>
+                </div>
+                <div class="input-field col s6 m3">
+                    <input placeholder="Destination" id="destination" type="text">
+                    <label for="destination">Destination</label>
+                </div>
+                <div class="input-field col s6 m3">
+                    <input placeholder="13:27 (military time)" id="first-train" type="text">
+                    <label for="first_train">First Train Time</label>
+                </div>
+                <div class="input-field col s6 m3">
+                    <input placeholder="15 (minutes)" id="frequency" type="text">
+                    <label for="frequency">Train Frequency</label>
+                </div>
+            </div>
+            <div class="row center">
+                <a class="waves-effect waves-light btn-large" id="new-train">Add New Train</a>
+            </div>
+        </form>
+    </section>
+    <section class="section">
+        <table class="container table-striped" id="train-table">
+            <thead>
+                <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>First Train</th>
+                    <th>Next Train</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- new trains go here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- custom JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
